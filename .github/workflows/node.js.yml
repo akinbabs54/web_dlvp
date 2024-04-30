@@ -18,7 +18,7 @@ jobs:
       - name: Build docker image
         run: docker build -t gabent/nodejs-app .
       - name: Publish image to docker hub
-        run: docker push gabEnt/nodejs-app:latest
+        run: docker push gabent/nodejs-app:latest
         
   deploy:
     needs: build
