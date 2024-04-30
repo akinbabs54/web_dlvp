@@ -16,9 +16,9 @@ jobs:
       - name: Login to docker hub
         run: docker login -u ${{secrets.DOCKER_USERNAME}} -p ${{ secrets.DOCKER_PASSWORD }} docker.io
       - name: Build docker image
-        run: docker build -t gabent/nodejs-app .
+        run: docker build -t akinbabs/nodejs-app .
       - name: Publish image to docker hub
-        run: docker push gabent/nodejs-app:latest
+        run: docker push akinbabs/nodejs-app:latest
         
   deploy:
     needs: build
