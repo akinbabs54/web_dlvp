@@ -25,8 +25,8 @@ jobs:
     runs-on: [self-hosted]
     steps:
       - name: Pull image from docker hub
-        run: docker pull akinbabs/nodejs-app:latest
+        run: docker pull akinbabs/gabentweb-app:latest
       - name: Delete old container
-        run: docker rm -f nodejs-app-container
+        run: docker rm -f gabentweb-container
       - name: Run docker container
-        run: docker run -d -p 5000:5000 --name nodejs-app-container akinbabs/nodejs-app
+        run: docker run -d -p 5000:5000 --name gabentweb-container akinbabs/gabentweb-app
